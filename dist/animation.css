@@ -1,0 +1,62 @@
+@keyframes animasiMasuk{
+    0%{
+        top: -50rem;
+        opacity: 0;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
+@keyframes animasiKeluar{
+    0%{
+        top: 50%;
+        opacity: 1;
+    }
+    100%{
+        top: -50rem;
+        opacity: 0;
+    }
+}
+
+.animasiMasuk{
+    animation: animasiMasuk .8s;
+    animation-fill-mode: forwards;
+}
+
+.animasiKeluar{
+    animation: animasiKeluar .8s;
+    animation-fill-mode: forwards;
+}
+.swiper-wrapper{
+    align-items: center;
+}
+.swiper__footer{
+    position: relative;
+    width: 100%;
+    overflow-x: clip;
+}
+.swiper-slide{
+    display: flex !important;
+    justify-content: center;
+}
+/* .swiper__footer::after{
+    content: "";
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, #fff,#fff,#ffffff77, #ffffff00);
+    z-index: 15;
+}
+.swiper__footer::before{
+    content: "";
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, #fff,#fff,#ffffff77, #ffffff00);
+    z-index: 15;
+} */

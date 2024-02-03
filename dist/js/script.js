@@ -44,4 +44,28 @@ darkToggle.addEventListener('click', function(){
 // Change position toggle in mode 
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) darkToggle.checked = true;
 else darkToggle.checked = false;
+
+AOS.init();
+const swiper = new Swiper('.swiper__footer', {
+// Optional parameters
+direction: 'horizontal',
+loop: true,
+slidesPerView: 3,
+autoWidth:true,
+breakpoints:{
+    800: {
+        slidesPerView: 5,
+    }
+},
+spaceBetween: 1,
+// centeredSlides:true,
+
+
+// Navigation arrows
+navigation: {
+    nextEl: '.next_btn',
+    prevEl: '.previous_btn',
+},
+
+});
   

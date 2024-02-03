@@ -8,6 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/animation.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="icon" type="image/x-icon" class="filter invert" href="dist/img/icons/tailwind-css.svg">
     <title>My Portfolio</title>
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -20,9 +28,9 @@
 </head>
 <body>
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="rounded-lg absolute top-5 left-1/2 -translate-x-1/2 lg:w-3/4 xl:w-3/4 sm:w-5/6 w-96 flex items-center z-10">
         <div class="container">
-            <div class="flex items-center justify-between relative">
+            <div class="flex items-center justify-between relative" data-aos="fade-down" data-aos-duration="1300">
                 <div class="px-4">
                     <a href="#home" class="font-bold text-primary dark:text-blue-500 block py-6">Biography</a>
                 </div>
@@ -36,11 +44,11 @@
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px]  w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-700">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Beranda</a>
+                                <a href="#home" class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">About Me</a>
                             </li>
-                            <li class="group">
+                            <!-- <li class="group">
                                 <a href="#about" class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">About Me</a>
-                            </li>
+                            </li> -->
                             <li class="group">
                                 <a href="#portfolio" class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Portfolio</a>
                             </li>
@@ -77,7 +85,7 @@
     <section id="home" class="pt-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full self-center px-4 font-inter lg:w-1/2">
+                <div class="w-full self-center px-4 font-inter lg:w-1/2" data-aos="fade-up" data-aos-duration="1300">
                     <h1 class="text-base font-semibold text-primary dark:text-blue-500 lg:text-2xl lg:mt-9 lg:right-0">Hallo Everybody 👋, I'am <span class="block text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Gilang Fauzi</span></h1>
                     <h2 class="text-secondary text-lg mb-5 lg:text-2xl">Software Engineer & <span class="text-secondary">IoT Engineer</span></h2>
                     <p class="text-slate-400 mb-10 leading-relaxed">The bachelor's degree that I obtained from the Faculty of Information Engineering, Pamulang University, was the basis for my education as a software engineer.</p>
@@ -85,10 +93,10 @@
                     <a href="dist/doc/CV Gilang Fauzi New.pdf" target="_blank" class="font-semibold bg-primary text-white py-3 px-8 rounded-full hover:shadow-md hover:opacity-90 transition duration-300 ease-in-out dark:bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500">Download CV</a>
                 </div>
 
-                <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="mt-8 relative lg:mt-8 lg:right-0">
-                        <img src="dist/img/animasi.png" alt="Gilang Fauzi" class="max-w-full max-h-[500px] mx-auto relative z-10 group">
-                        <span class="absolute -bottom-9 left-1 lg:translate-x-36 translate-x-3 md:translate-x-32 md:scale-125 transition">
+                <div class="w-full self-end px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="1300">
+                    <div class="mt-8 relative lg:mt-8 lg:right-0 group">
+                        <img src="dist/img/animasi.png" alt="Gilang Fauzi" class="max-w-full max-h-[500px] mx-auto relative z-10">
+                        <span class="absolute -bottom-9 left-1 lg:translate-x-36 translate-x-3 md:translate-x-32 md:scale-125">
                             <svg width="300" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <linearGradient id="myGradient" gradientTransform="rotate(120)">
                                     <stop offset="12%" stop-color="cyan" style="filter: hue-rotate(1000deg);" />
@@ -98,7 +106,7 @@
                                 <path fill="url(#myGradient)" d="M39.3,-64.8C49.4,-54.6,55.2,-41.2,60.8,-28C66.4,-14.9,71.8,-1.9,72.8,12.5C73.9,26.8,70.5,42.5,60.9,51.7C51.3,61,35.4,63.8,21.2,64.2C7.1,64.7,-5.4,62.8,-19.3,61C-33.3,59.1,-48.6,57.3,-61.3,49.4C-73.9,41.5,-83.8,27.5,-86.2,12.3C-88.5,-2.9,-83.4,-19.3,-73.5,-30.4C-63.5,-41.5,-48.8,-47.3,-35.8,-56.2C-22.8,-65.1,-11.4,-77.1,1.6,-79.6C14.6,-82,29.1,-75,39.3,-64.8Z" transform="translate(100 100) scale(1)" />
                             </svg>
                         </span>
-                        <span class="absolute -bottom-9 left-1 lg:translate-x-36 translate-x-3 md:translate-x-32 md:scale-125 transition dark:hidden">
+                        <span class="absolute -bottom-9 left-1 lg:translate-x-36 translate-x-3 md:translate-x-32 md:scale-125 dark:hidden ">
                             <svg width="300" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <linearGradient id="myGradient" gradientTransform="rotate(120)">
                                     <stop offset="12%" stop-color="cyan" style="filter: hue-rotate(1000deg);" />
@@ -116,30 +124,33 @@
     <!-- Hero Section End -->
 
     <!-- New About Start -->
-    <section id="about" class="pt-32 pb-32 dark:bg-slate-800"> 
+    <!-- <section id="about" class="pt-32 pb-32 dark:bg-slate-800">  -->
+    <section id="about" class="relative -mb-[9rem] dark:bg-dark"> 
         <div class="container">
-            <div class="flex flex-wrap ">
-                <div class="w-full px-4 mb-10 lg:w-full">
-                    <h2 class="font-bold uppercase text-primary dark:text-blue-500 text-3xl mb-3 text-center">About Me</h2>
-                    <!-- <h2 class="font-semibold font-dark text-3xl mb-5 lg:text-4xl dark:text-white text-center">Yuk, Kita menari di atas penderitaan!</h2> -->
-                    <p class="text-base text-secondary text-center mb-10">The bachelor's degree that I obtained from the Faculty of Information Engineering, Pamulang University, was the basis for my education as a software engineer. With the experience and expertise I have developed, I have succeeded in creating innovative solutions in the development of Internet of Things (IoT) systems and contributing to web development projects. I have a great interest in the field of technology, one of which is web development and the Internet of Things.</p>
+            <div class="bg-white dark:bg-slate-700 rounded-lg py-10 shadow-sm border-gray-100 dark:border-gray-700 border-2" data-aos="fade-up" data-aos-duration="1300">
+                <div class="flex flex-wrap mx-auto">
+                    <div class="w-full px-4 lg:w-full">
+                        <h2 class="font-bold uppercase text-primary dark:text-blue-500 text-3xl mb-3 text-center">About Me</h2>
+                        <!-- <h2 class="font-semibold font-dark text-3xl mb-5 lg:text-4xl dark:text-white text-center">Yuk, Kita menari di atas penderitaan!</h2> -->
+                        <p class="text-base text-slate-400 text-center mb-10">The bachelor's degree that I obtained from the Faculty of Information Engineering, Pamulang University, was the basis for my education as a software engineer. With the experience and expertise I have developed, I have succeeded in creating innovative solutions in the development of Internet of Things (IoT) systems and contributing to web development projects. I have a great interest in the field of technology, one of which is web development and the Internet of Things.</p>
 
-                    <div class="flex justify-center">
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
-                            <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
-                        </a>
+                        <div class="flex justify-center gap-3">
+                            <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                                <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                            </a>
 
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
-                            <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </a>
+                            <a href="https://github.com/GilangFauzi" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                                <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            </a>
 
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
-                           <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
+                            <a href="https://gitlab.com/gilangfauzii" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                                <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg"><title>GitLab</title><path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg>
+                             </a>
 
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
-                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
-                         </a>
+                            <a href="https://linkedin.com/in/gilang-fauzi-31a635255" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:text-white">
+                            <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,17 +195,16 @@
     <!-- About Section End -->
 
     <!--New Portfolio Section Start -->
-    <hr>
-    <section id="portfolio" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
+    <section id="portfolio" class="pt-52 pb-32 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
+                <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-up" data-aos-duration="800">
                     <h4 class="font-semibold text-lg text-primary dark:text-blue-500 mb-2">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl dark:text-white">My Project</h2>
                     <p class="text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusamus tenetur repudiandae saepe velit, omnis recusandae a vero reiciendis? Modi?</p>
                 </div>
             </div>      
-            <ol class="mx-4 relative border-s border-gray-200 dark:border-gray-700">                  
+            <ol class="mx-4 relative border-s border-gray-200 dark:border-gray-700" data-aos="fade-right" data-aos-duration="800"  data-aos-delay="500">                  
                 <li class="mb-10 ms-6">            
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                         <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -204,10 +214,10 @@
                     <h3 data-modal-target="default-modal" data-modal-toggle="default-modal" class="flex items-center mb-1 text-lg font-semibold cursor-pointer text-gray-900 dark:text-white">Core System NasionalRe<span class="bg-yellow-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-300 dark:text-white ms-3">Running</span></h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 13th, 2022</time>
                     <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-                    <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <!-- <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
                 <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-            </svg> Download ZIP</a>
+            </svg> Download ZIP</a> -->
                 </li>
                 <li class="mb-10 ms-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -215,17 +225,27 @@
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                         </svg>
                     </span>
-                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Company Profile Askrida<span class="bg-green-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-500 dark:text-white ms-3">Done</span></h3>
+                    <h3 data-modal-target="modal-askrida-conven" data-modal-toggle="modal-askrida-conven" class="mb-1 text-lg font-semibold text-gray-900 dark:text-white cursor-pointer">Company Profile Askrida<span class="bg-green-200 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-500 dark:text-white ms-3">Done</span></h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 7th, 2021</time>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
                 </li>
-                <li class="ms-6">
+                <li class="mb-10 ms-6">
                     <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                         <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                         </svg>
                     </span>
                     <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">System Run Payroll<span class="bg-yellow-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-300 dark:text-white ms-3">Running</span></h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                </li>
+                <li class="mb-10 ms-6">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Internet of Things (Smart Booking)<span class="bg-yellow-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-300 dark:text-white ms-3">Running</span></h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
                 </li>
@@ -264,8 +284,6 @@
             </div> -->
         </div>
     </section>
-
-    <hr>
     <!-- New Portfolio Section End -->
 
     <!-- Portfolio Section Start -->
@@ -313,19 +331,21 @@
     <!-- Portfolio Section End -->
 
      <!-- Clients Section Start -->
-     <section id="clients" class="pt-36 pb-32 dark:bg-slate-800">
+     <section id="clients" class="pt-36 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
-                <div class=" mx-auto text-center mb-16">
+                <div class=" mx-auto text-center mb-16" data-aos="fade-up" data-aos-duration="1300">
                     <h4 class="font-semibold text-lg text-primary dark:text-blue-500 mb-2">My Skill</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl dark:text-white">Skill & Sertification</h2>
                     <p class="text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusamus tenetur repudiandae saepe velit, omnis recusandae a vero reiciendis? Modi?</p>
                 </div>
             </div>
 
-            <div class="flex flex-wrap">
+            <!-- <div class="flex flex-wrap"> -->
+            <div class="lg:columns-3 mb-3">
 
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
+                <!-- <div class="w-full px-4 lg:w-1/2 xl:w-1/3"> -->
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/Sertifikat Rakamin Academy_Gilang Fauzi.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -335,16 +355,20 @@
                     </div>
                 </div>
 
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500" >
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
-                        <img src="dist/img/sertification/Sertifikat BNSP_Gilang Fauzi.jpg" alt="" class="w-full">
+                        <div class="h-full w-full">
+                        <!-- <div class="h-[223px] w-full hover:h-[600px] transition-all"> -->
+                            <img src="dist/img/sertification/Sertifikat BNSP_Gilang Fauzi.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
                         <div class="py-8 px-6">
                             <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">National Professional Certification Agency</a></h3>
                             <p class="font-medium text-secondary text-base mb-4 dark:text-slate-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, expedita!</p>
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/laravel.jpg" alt="" class="w-full bg-cover">
                         <div class="py-8 px-6">
@@ -353,7 +377,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/github.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -362,7 +386,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/Sertifikat DigiTelent_Gilang Fauzi.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -372,7 +396,7 @@
                     </div>
                 </div>
                
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/vue.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -382,7 +406,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/Sertifikat TKJ Gilang Fauzi.jpeg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -391,7 +415,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/Sertifikat TOEFL GilangFauzi.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -400,7 +424,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/SKILL_PASSPORT_Gilang Fauzi.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -409,7 +433,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <div class="w-full px-4" data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-700">
                         <img src="dist/img/sertification/SERTIFIKAT_PELATIHAN__PEMROGRAM_GILANG FAUZI.jpg" alt="" class="w-full">
                         <div class="py-8 px-6">
@@ -419,42 +443,67 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="py-32">
+                <div class="swiper__footer relative after:absolute after:bg-gradient-to-r dark:after:bg-none  after:from-white dark:after:bg-transparent after:z-10 after:w-1/2 after:bottom-0 after:h-full before:absolute before:bg-gradient-to-l dark:before:bg-none before:from-white dark:before:bg-transparent before:z-10 before:w-1/2 before:right-0 before:bottom-0 before:h-full">
+                    <div class="swiper-wrapper">
+                    <!-- <div class="flex flex-wrap items-center justify-center"> -->
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/laravel.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/html-5.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/css-3.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/tailwind-css.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/mysql-logo.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/icons8-bootstrap.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/jquery-1.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/logo-javascript.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/php-1.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/vue-9.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <!-- <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/vue-9.svg" class="xl:w-24 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/vue-9.svg" class="xl:w-24 md:w-16 sm:w-14 w-12" alt="">
+                        </a>
+                        <a href="#" class="opacity-60 transition hover:opacity-100 swiper-slide hover:grayscale-0 duration-500">
+                            <img src="dist/img/icons/vue-9.svg" class="xl:w-24 w-12" alt="">
+                        </a> -->
+                    </div>
 
-            <div class="w-full px-4">
-                <div class="flex flex-wrap items-center justify-center">
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/laravel.svg" class="w-12" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/html-5.svg" class="w-12" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/css-3.svg" class="w-12" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/tailwind-css.svg" class="w-16" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/mysql-logo.svg" class="w-16" alt="">
-                    </a>
-                    <a href="#" class="bg-cyan-400 max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                         <img src="dist/img/icons/bootsrap.svg" class="w-14 bg-blue-500 rounded" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/jquery-1.svg" class="w-15" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/logo-javascript.svg" class="w-12" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/php-1.svg" class="w-16" alt="">
-                    </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/icons/vue-9.svg" class="w-14" alt="">
-                    </a>
+                    <div class="w-full flex justify-between  items-center absolute top-1/2 -translate-y-1/2 z-20">
+                        <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-700 dark:border-none dark:border-dark border-2 shadow-sm cursor-pointer previous_btn flex items-center justify-center">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-white dark:bg-slate-700 dark:border-none border-2 shadow-sm cursor-pointer next_btn flex items-center justify-center">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-red p-10 w-20 grid flex item rounded-full border-2 shadow-sm">
+                        <div class="swiper-button-prev text-gray-700"></div>
+                    </div>
+                    <div class="swiper-button-next"></div> -->
+                    <!-- <div class="border-t border-slate-700"></div> -->
                 </div>
             </div>
-            <div class="border-t border-slate-700"></div>
         </div>
     </section>
     <!-- Clients Section End -->
@@ -472,13 +521,13 @@
 
             <div class="w-full px-4">
                 <div class="flex flex-wrap items-center justify-center">
-                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500">
                         <img src="dist/img/clients/Google.svg" alt="">
                     </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500">
                         <img src="dist/img/clients/Gojek.svg" alt="">
                     </a>
-                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:opacity-100 hover:grayscale-0 duration-500">
                         <img src="dist/img/clients/Tokopedia.svg" alt="">
                     </a>
                 </div>
@@ -625,21 +674,21 @@
                             <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
                         </a>
 
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://github.com/GilangFauzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
                             <svg role="img" class="fill-current" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                         </a>
 
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <a href="https://gitlab.com/gilangfauzii" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitLab</title><path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg>
+                         </a>
+
+                        <a href="https://linkedin.com/in/gilang-fauzi-31a635255" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
                            <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
-
-                        <a href="https://instagram.com/gilngfzi" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
-                         </a>
                     </div>
                     <p class="font-medium text-sm text-slate-500 text-center">Get to know me more deeply by following my social media <span class="text-pink-500">❤</span></p>
                 </div>
-            </div>
+            </div>  
         </footer>
     <!-- Footer Section End -->
 
@@ -650,7 +699,7 @@
     <!-- Back to Top End -->
 
     <!-- Modal Box Nasre Start -->
-    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden animasiMasuk overflow-y-auto overflow-x-hidden fixed top-1/2 -translate-y-1/2 right-0 left-0 z-[9999]">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -668,39 +717,111 @@
                 </div>
                 <!-- Modal body -->
                 <div class="px-3 md:p-5 space-y-4">
+                    <h3 class="font-bold text-slate-500 dark:text-white border-b-2 mt-3 md:mt-0">Modul Facultative</h3>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        The European Union's General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
                     </p>
                 </div>
 
                 <div class="w-full px-2 flex flex-wrap justify-center xl:w-full xl:mx-auto">
-                    <div class="mb-3 p-4 md:w-1/2">
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
                         <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="dist/img/portfolio/1.jpeg" alt="Landing Page" width="w-full">
+                            <img src="dist/img/modal/facultative/home.png" alt="Landing Page" width="w-full">
                         </div>
                         <!-- <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Gilang Fauzi</h3>
                         <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veritatis aspernatur magnam quas, quasi nulla.</p>   -->
                     </div>
-                    <div class="mb-3 p-4 md:w-1/2">
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/modal/facultative/fe.png" alt="Landing Page" width="w-full">
+                        </div>
+                    </div>
+                    <!-- <div class="mb-3 p-4 md:w-1/2 w-[143px]">
                         <div class="rounded-md shadow-md overflow-hidden">
                             <img src="dist/img/portfolio/2.jpeg" alt="Landing Page" width="w-full">
                         </div>
-                        <!-- <h3 class="font-semibold text-xl text-dark mt-5 mb-3">E-commerce</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veritatis aspernatur magnam quas, quasi nulla.</p>   -->
+                    </div> -->
+                </div>
+
+                <div class="px-3 md:p-5 space-y-4">
+                    <h3 class="font-bold text-slate-500 dark:text-white border-b-2 mt-3 md:mt-0">Modul HC & GA</h3>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                </div>
+
+                <div class="w-full px-2 flex flex-wrap justify-center xl:w-full xl:mx-auto">
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/modal/facultative/home.png" alt="Landing Page" width="w-full">
+                        </div>
+                    </div>
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/modal/sdm/spd.png" alt="Landing Page" width="w-full">
+                        </div>
                     </div>
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 justify-end">
-                    <button data-modal-hide="default-modal" type="button" class="text-gray-50 hover:bg-gray-200 focus:ring-4 focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-gray-600">Close</button>
+                    <button data-modal-hide="default-modal" type="button" class="text-gray-600 hover:bg-primary focus:ring-4 focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-white focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-gray-600 ">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal Box Nasre End -->
+
+    <!-- Modal Box Askrida Conven Start -->
+    <div id="modal-askrida-conven" tabindex="-1" aria-hidden="true" class="hidden animasiMasuk overflow-y-auto overflow-x-hidden fixed top-1/2 -translate-y-1/2 right-0 left-0 z-[9999]">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 bg-gray-200 dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Company Profile Askrida
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal-askrida-conven">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="px-3 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                </div>
+
+                <div class="w-full px-2 flex flex-wrap justify-center xl:w-full xl:mx-auto">
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/modal/askridaConven/landing.png" alt="Landing Page" width="w-full">
+                        </div>
+                    </div>
+                    <div class="mb-3 p-4 md:w-1/2 w-[143px]">
+                        <div class="rounded-md shadow-md overflow-hidden">
+                            <img src="dist/img/modal/askridaConven/backend.png" alt="Landing Page" width="w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 justify-end">
+                    <button data-modal-hide="modal-askrida-conven" type="button" class="text-gray-600 hover:bg-primary focus:ring-4 focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-white focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-gray-600 ">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Box Askrida Conven End -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <script src="dist/js/script.js"></script>
+    <script>
+       
+    </script>
 </body>
 </html>
